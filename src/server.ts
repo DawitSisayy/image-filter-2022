@@ -39,7 +39,6 @@ import Jimp from 'jimp';
     try{
       if(req.query && req.query.image_url) {
         
-        
         if (!image_url) {
           res.status(400).send('Image url is required');
         }
