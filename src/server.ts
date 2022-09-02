@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import {Router, Request, Response} from 'express';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
+import fs from 'fs'
 
 (async () => {
 
