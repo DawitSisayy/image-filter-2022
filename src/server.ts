@@ -35,11 +35,11 @@ import Jimp from 'jimp';
   /**************************************************************************** */
 
   app.get('/filteredimage', async (req: Request, res: Response) => {
-
+    const image_url = req.query.image_url.toString();
     try{
       if(req.query && req.query.image_url) {
         
-        const image_url = req.query.image_url.toString();
+        
         if (!image_url) {
           res.status(400).send('Image url is required');
         }
@@ -57,8 +57,6 @@ import Jimp from 'jimp';
 
     
   });
-
-
 
 
   //! END @TODO1
