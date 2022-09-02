@@ -5,7 +5,7 @@ import {Router, Request, Response} from 'express';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 import fs from 'fs';
 import Jimp from 'jimp';
-import URL from 'url';
+
 
 
 (async () => {
@@ -35,10 +35,19 @@ import URL from 'url';
   /**************************************************************************** */
 
   app.get('/filteredimage', async (req: Request, res: Response) => {
-    const image_url = req.query.image_url.toString();
-    if (!image_url) {
-      res.status(400).send('Image url is required');
-    }
+
+    try{
+      if(req.query && req.query.image_url) {
+        
+        const image_url = req.query.image_url.toString();
+        if (!image_url) {
+          res.status(400).send('Image url is required');
+        }
+            
+       }
+      } catch (error) {
+        return error
+      }
 
     const filtered_image = await filterImageFromURL(image_url);
 
@@ -48,6 +57,8 @@ import URL from 'url';
 
     
   });
+
+
 
 
   //! END @TODO1
