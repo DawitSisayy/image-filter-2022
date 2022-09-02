@@ -1,4 +1,4 @@
-/*
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import {Router, Request, Response} from 'express';
@@ -49,7 +49,7 @@ import URL from 'url';
     
   });
 
-*/
+
 
 
 /*
@@ -85,7 +85,7 @@ import URL from 'url';
 
 
 
-/*
+
 
   //! END @TODO1
   
@@ -101,11 +101,12 @@ import URL from 'url';
       console.log( `server running http://localhost:${ port }` );
       console.log( `press CTRL+C to stop server` );
   } );
+  
 })();
 
 
-*/
 
+/*
 import express from 'express';
 import bodyParser from 'body-parser';
 import URL from 'url';
@@ -140,7 +141,6 @@ import fs from 'fs'
   // RETURNS
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
-  /**************************************************************************** */
 
   //! END @TODO1
   
@@ -182,3 +182,5 @@ try{
 function typeOf(image_url: any): any {
   throw new Error('Function not implemented.');
 }
+
+/**************************************************************************** */
