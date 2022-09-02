@@ -119,7 +119,7 @@ import fs from 'fs'
   const app = express();
 
   // Set the network port
-  const port = process.env.PORT || 3001;
+  const port = process.env.PORT || 8082;
   
   // Use the body parser middleware for post requests
   app.use(bodyParser.json());
