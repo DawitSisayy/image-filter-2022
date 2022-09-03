@@ -3,11 +3,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import {Router, Request, Response} from 'express';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
-import fs from 'fs';
-import Jimp from 'jimp';
-import axios, { AxiosRequestConfig, AxiosPromise } from 'axios';
 
-const axios = require('axios').default;
+
+
 (async () => {
 
   // Init the Express application
