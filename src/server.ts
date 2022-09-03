@@ -5,9 +5,9 @@ import {Router, Request, Response} from 'express';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 import fs from 'fs';
 import Jimp from 'jimp';
+import axios, { AxiosRequestConfig, AxiosPromise } from 'axios';
 
-
-
+const axios = require('axios').default;
 (async () => {
 
   // Init the Express application
@@ -39,7 +39,6 @@ import Jimp from 'jimp';
     try{
       if(req.query && req.query.image_url) {
         
-        
         if (!image_url) {
           res.status(400).send('Image url is required');
         }
@@ -57,6 +56,20 @@ import Jimp from 'jimp';
 
     
   });
+
+  /*
+  axios({
+    method: 'get',
+    url: failingImageUrl,
+    responseType: 'arraybuffer'
+    })
+    .then(function ({data: imageBuffer}) {
+     return jimp.read(imageBuffer)
+    })
+*/
+
+
+
 
 
   //! END @TODO1
